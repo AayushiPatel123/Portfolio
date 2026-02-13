@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-weight: 800; letter-spacing: 1px; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+/* The Resume Button Styling */
+.btn-resume {
+    border: 2px solid #333; /* Dark outline */
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700 !important;
+}
+.btn-resume:hover {
+    background-color: #333; /* Fills with dark color on hover */
+    color: #fff !important; /* Text turns white */
+}
+/* Split Landing Page */
+.split-landing {
+    display: flex;
+    height: 100vh; /* Full screen height */
+    align-items: center;
+}
+
+.left-side, .right-side {
+    flex: 1; /* Each takes exactly 50% */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-side {
+    background-color:#ffffff; /* Light grey background for image side */
+}
+
+.image-container img {
+    width: 350px;
+    height:350px;
+    object-fit: cover;
+    border-radius: 200px; /* Rounded corners instead of circle for a modern look */
+    box-shadow:10px 0 20px -5px rgba(115,115,115,0.75); /* Stylish offset shadow */
+}
+.position {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 50px;
+    color: #555;
+    padding-top: 50px;
+
+}
+.right-side {
+    padding: 0 10%;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.highlight { color: #007bff; }
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+/* Button */
+.btn-primary {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { background-color: #0056b3; transform: translateY(-3px); }
+
+/* experience*/
+/* Experience Section Styling */
+.experience-section {
+    padding: 80px 10%;
+    background-color: #dbe0f6;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Subtle underline for the title */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #007bff;
+    margin: 10px auto;
+}
+
+/* Grid Layout */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Card Styling */
+.experience-card {
+    background: #eff5fb;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+.card-header .date {
+    font-size: 0.8rem;
+    color: #007bff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-header h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.4rem;
+}
+
+.card-header .company {
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    list-style: none;
+    padding: 0;
+}
+
+.card-body li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Custom bullet points */
+.card-body li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-weight: bold;
+}
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.contact-grid a { color: #007bff; text-decoration: none; }
+
+.copyright { font-size: 0.8rem; color: #777; }
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .split-landing {
+        flex-direction: column;
+        height: auto;
+        padding-top: 80px;
+    }
+    .left-side { padding: 40px 0; }
+    .image-container img
+     {
+         width: 250px; 
+         height: 500px;
+          border-radius: 150px; 
+        }
+    .right-side { text-align: center; padding-bottom: 60px; }
+    .contact-grid { flex-direction: column; gap: 15px; }
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 80px 10%;
+    background-color: #f4f7f6; /* Subtle difference from experience section */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Card Styling */
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Clips the image to the border radius */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #007bff;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+/* Tech Tags (SQL, Python, etc) */
+.tech-tag {
+    display: inline-block;
+    background: #e7f1ff;
+    color: #007bff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.project-info h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.view-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.view-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.skills-section {
+    padding: 80px 10%;
+    background-color: #ffffff;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* This makes specific cards span across 2 columns for a "Bento" look */
+.skill-card.wide {
+    grid-column: span 2;
+}
+
+.skill-card:hover {
+    border-color: #007bff;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
+    transform: scale(1.02);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    background: #f0f4f8;
+    color: #444;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.skill-card:hover .skill-tags span {
+    background: #e7f1ff;
+    border-color: #007bff;
+}
+
+/* Responsive for Tablet/Phone */
+@media (max-width: 900px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    .skill-card.wide {
+        grid-column: span 1;
+    }
+}
+/* Styling for the mini progress bars inside skill cards */
+.skill-level-container {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.level-bar {
+    height: 6px;
+    background: #eef2f5;
+    border-radius: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.level-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    border-radius: 10px;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #555;
+    margin-top: 10px;
+}
